@@ -105,3 +105,33 @@ def get_categorized_questions():
         JSON list of categorized questions with metadata.
     """
 ```
+
+**Sub-Issue 5:** Implement User Interface for Categorization Review  
+**Priority:** 🟠 Medium  
+- **Goal:** Develop a web interface that allows users to review, edit, and approve categorized questions.
+- **Purpose:** Enable AI developers to verify and refine the automated categorization results before finalizing them.
+- **Tasks:**
+  - **Develop UI Layout**
+    - Design a web page that displays categorized questions in a table format.
+    - Ensure a responsive design for different screen sizes.
+  - **Create Input and Display Fields**
+    - Display the question text in a read-only field.
+    - Add an editable dropdown for category selection.
+    - Add an editable dropdown for difficulty level selection.
+    - Include a metadata section where users can add additional tags.
+  - **Implement User Actions**
+    - Add an **"Edit"** button that allows users to modify category tags.
+    - Add a **"Save"** button to confirm category changes.
+    - Add a **"Reset"** button to undo any changes before saving.
+  - **Implement Search and Filter Functionalities**
+    - Add a search bar for searching questions.
+    - Implement filter options for category and difficulty level.
+  - **Connect UI with Backend API**
+    - Fetch categorized data from the API (**GET /categorized_questions**).
+    - Implement real-time updates when a user modifies a category.
+    - Send the updated data to the API (**PUT /update_categorized_question/{id}**).
+  - **Handle Errors and Notifications**
+    - Show a **confirmation message** after saving changes.
+    - Display an **error message** if saving fails.
+
+---
