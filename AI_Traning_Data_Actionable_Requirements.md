@@ -190,3 +190,24 @@ CREATE TABLE training_questions (
 CREATE INDEX idx_dataset_name ON uploaded_datasets(dataset_name);
 CREATE INDEX idx_question_text ON training_questions(question_text);
 ```
+**Sub-Issue 3:** Implement API for Dataset Upload  
+**Priority:** 🔴 High  
+- **Goal:** Develop a **REST API** that allows users to upload datasets via a web interface or programmatically.
+- **Approach:** Use **Flask/Django**, supporting **CSV and JSON** uploads.
+- **Tasks:**
+  - Develop a `POST /upload_dataset` API endpoint to accept dataset files.
+  - Validate file format (support **only CSV/JSON**).
+  - Store metadata about the uploaded dataset in the database.
+  - Process and insert training questions into the structured database.
+  - Handle error cases (e.g., invalid format, corrupted files).
+
+**Python Implementation Suggestion:**
+```python
+@app.route('/upload_dataset', methods=['POST'])
+def upload_dataset():
+    """
+    Handles dataset uploads via API.
+    Returns:
+        JSON response confirming the upload or an error message.
+    """
+```
