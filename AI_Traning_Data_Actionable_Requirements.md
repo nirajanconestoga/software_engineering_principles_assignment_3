@@ -61,3 +61,25 @@ CREATE TABLE categorized_questions (
 CREATE INDEX idx_category ON categorized_questions(category);
 ```
 
+**Sub-Issue 3:** Implement AI-Based Categorization Model  
+**Priority:** 🔴 High  
+- **Goal:** Develop an NLP model that analyzes questions and assigns metadata based on their content.
+- **Approach:** Train an AI-based model (e.g., using **spaCy** or **BERT**) to classify questions into predefined categories.
+- **Tasks:**
+  - Preprocess training data (tokenization, stopword removal).
+  - Train the model using labeled questions.
+  - Evaluate model accuracy (**F1-score ≥ 85%**).
+  - Develop a function that takes a question as input and returns metadata predictions.
+  - Optimize model performance to reduce categorization time.
+
+**Python Implementation Suggestion:**
+```python
+def categorize_question(question_text: str) -> dict:
+    """
+    Categorizes a question using an NLP model.
+    Parameters:
+        question_text (str): The input question.
+    Returns:
+        dict: A dictionary containing predicted category and difficulty.
+    """
+```
