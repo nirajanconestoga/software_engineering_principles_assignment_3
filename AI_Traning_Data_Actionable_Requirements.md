@@ -234,7 +234,6 @@ def index_dataset(dataset_id: int):
 ```
 **Sub-Issue 5:** Develop User Interface for Dataset Upload and Management
 **Priority:** 🟠 Medium
-
 - **Goal:** Build a user-friendly web interface that allows users to upload, manage, and search datasets easily.
 - **Purpose:** Enable AI developers to upload structured datasets, view dataset details, and search for categorized training data. Build a user-friendly web interface that allows users to upload, manage, and search datasets easily.
 - **Tasks:**
