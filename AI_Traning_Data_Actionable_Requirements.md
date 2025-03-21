@@ -232,3 +232,37 @@ def index_dataset(dataset_id: int):
         Success message or error response.
     """
 ```
+**Sub-Issue 5:** Develop User Interface for Dataset Upload and Management
+**Priority:** 🟠 Medium
+
+- **Goal:** Build a user-friendly web interface that allows users to upload, manage, and search datasets easily.
+- **Purpose:** Enable AI developers to upload structured datasets, view dataset details, and search for categorized training data. Build a user-friendly web interface that allows users to upload, manage, and search datasets easily.
+- **Tasks:**
+ - **Develop UI Layout**
+    - Design a dataset upload page with drag-and-drop file support.
+    - Implement a table view to display uploaded datasets.
+    - Ensure a responsive design for desktop and mobile.
+
+ - **Create Input and Display Fields**
+    - Create a file upload button for CSV/JSON dataset uploads.
+    - Display dataset name, upload timestamp, and metadata.
+    - Add a search bar to find datasets by name.
+
+ - **Implement User Actions**
+    - Allow users to browse and select a file for upload.
+    - Display a progress bar during dataset upload.
+    - Show a confirmation message upon successful upload.
+
+ - **Implement Search and Filter Functionalities**
+    - Allow users to search training questions by keyword, category, and difficulty.
+    - Display search results in real-time using indexed queries.
+
+ - **Connect UI with Backend API**
+    - Send dataset files to the API (`POST /upload_dataset`).
+    - Fetch dataset details from the API (`GET /datasets`).
+    - Implement real-time updates when a dataset is uploaded.
+
+ - **Handle Errors and Notifications**
+    - Show a notification message when an upload fails.
+    - Display error details (e.g., unsupported file format, upload failure).
+
