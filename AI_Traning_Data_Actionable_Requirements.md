@@ -30,3 +30,10 @@ To address this, we will implement an **automated categorization system** that a
 - **Develop an AI-based categorization model** to classify questions based on their content.
 - **Implement a backend API** to provide categorized results to other systems.
 - **Build a user interface** to allow developers to review and edit categorizations before finalizing.
+
+##### Sub-Issues
+
+**Sub-Issue 1:** We assume that automated categorization will reduce manual effort and improve consistency.  
+**Priority:** 🔴 High  
+- Validate this assumption by testing categorization results on three sample datasets (each with 10,000 questions), ensuring the model achieves an **F1-score of at least 85%**.
+- Review results with subject matter experts and analyze misclassifications to improve model accuracy and reliability.
