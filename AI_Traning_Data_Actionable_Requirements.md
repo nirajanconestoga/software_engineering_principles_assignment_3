@@ -135,3 +135,18 @@ def get_categorized_questions():
     - Display an **error message** if saving fails.
 
 ---
+
+### 2: Dataset Upload and Structured Storage
+**Title:** As an AI developer, I want to upload a dataset and have the system automatically structure and store categorized training questions so that I can efficiently retrieve and manage large volumes of data.  
+**Priority:** 🔴 High  
+**GitHub Issue:** #2  
+
+#### **Purpose**
+After discussions with AI developers, we identified that **manually managing large datasets** is inefficient and prone to errors.  
+To address this, we will build a system that allows **automatic dataset uploads, structured storage, and fast retrieval** of categorized training data.
+
+#### **Implementation Strategy**
+- **Design a database schema** optimized for storing and retrieving structured datasets.
+- **Develop an API** that enables dataset uploads via a web interface or programmatically.
+- **Implement automatic indexing** for fast data retrieval.
+- **Ensure scalability** to handle large datasets efficiently (up to **10 million entries**).
