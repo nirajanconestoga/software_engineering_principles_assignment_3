@@ -37,3 +37,27 @@ To address this, we will implement an **automated categorization system** that a
 **Priority:** 🔴 High  
 - Validate this assumption by testing categorization results on three sample datasets (each with 10,000 questions), ensuring the model achieves an **F1-score of at least 85%**.
 - Review results with subject matter experts and analyze misclassifications to improve model accuracy and reliability.
+
+**Sub-Issue 2:** Design and Set Up Database for Categorization  
+**Priority:** 🟠 Medium  
+- **Goal:** Create a **structured database** to store categorized questions, ensuring efficient retrieval and metadata management.
+- **Approach:** Use **PostgreSQL** with **indexes for fast retrieval**.
+- **Tasks:**
+  - Define **metadata categories** (topic, difficulty, length).
+  - Create a **PostgreSQL table** to store categorized questions.
+  - Add **indexes** to optimize search queries.
+  - Write an **SQL script** to initialize the database schema.
+  - Develop a **function to insert categorized questions** into the database.
+
+**SQL Implementation Suggestion:**
+```sql
+CREATE TABLE categorized_questions (
+    id SERIAL PRIMARY KEY,
+    question_text TEXT NOT NULL,
+    category VARCHAR(255),
+    difficulty VARCHAR(50),
+    metadata JSONB
+);
+CREATE INDEX idx_category ON categorized_questions(category);
+```
+
