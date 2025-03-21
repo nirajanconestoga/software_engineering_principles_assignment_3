@@ -211,3 +211,24 @@ def upload_dataset():
         JSON response confirming the upload or an error message.
     """
 ```
+**Sub-Issue 4:** Implement Automatic Indexing for Fast Retrieval  
+**Priority:** 🟠 Medium  
+- **Goal:** Ensure fast search and retrieval of uploaded datasets using indexing and optimized queries.
+- **Approach:** Integrate **Elasticsearch** to enable real-time indexing and sub-200ms retrieval times.
+- **Tasks:**
+  - Install and configure **Elasticsearch** for efficient search indexing.
+  - Develop a background process that **automatically indexes datasets** upon upload.
+  - Implement a function to **search categorized questions using Elasticsearch**.
+  - Optimize query execution times to ensure results are retrieved **within 200ms**.
+
+**Python Implementation Suggestion:**
+```python
+def index_dataset(dataset_id: int):
+    """
+    Indexes dataset into Elasticsearch for fast retrieval.
+    Parameters:
+        dataset_id (int): The ID of the dataset to index.
+    Returns:
+        Success message or error response.
+    """
+```
