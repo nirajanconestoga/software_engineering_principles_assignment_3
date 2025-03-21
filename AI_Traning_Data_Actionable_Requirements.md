@@ -153,10 +153,9 @@ To address this, we will build a system that allows **automatic dataset uploads,
 
 ##### **Sub-Issues**
 
-**Sub-Issue 1:** Assumption Validation - Storage & Indexing Performance  
+**Sub-Issue 1:** We assume that structured storage with appropriate indexing will enhance data retrieval speeds and system efficiency.   
 **Priority:** 🔴 High  
-- Validate the assumption that structured storage with appropriate indexing will enhance data retrieval speeds.
-- Test dataset uploads up to **10 million entries**, ensuring retrieval times remain under **200ms**, even during concurrent operations.
+- Validate this assumption by testing uploads with datasets up to 10 million entries, and let the client know that the benefit of this is to ensure the system can scale efficiently while maintaining fast retrieval times under 200ms, even during concurrent upload and query operations.
 
 **Sub-Issue 2:** Design and Set Up Database for Dataset Storage  
 **Priority:** 🟠 Medium  
