@@ -83,3 +83,25 @@ def categorize_question(question_text: str) -> dict:
         dict: A dictionary containing predicted category and difficulty.
     """
 ```
+
+**Sub-Issue 4:** Develop Backend API for Categorization  
+**Priority:** 🔴 High  
+- **Goal:** Create a REST API that allows external systems to request categorized questions.
+- **Approach:** Use **Flask/Django** to connect to the AI model and database.
+- **Tasks:**
+  - Develop a `POST /categorize` API endpoint to accept a question and return metadata.
+  - Connect the API to the AI-based categorization model.
+  - Implement `GET /categorized_questions` to retrieve categorized questions from the database.
+  - Implement `PUT /update_categorized_question/{id}` to allow category updates.
+  - Handle error cases (e.g., missing data, invalid inputs).
+
+**Python Implementation Suggestion:**
+```python
+@app.route('/categorized_questions', methods=['GET'])
+def get_categorized_questions():
+    """
+    Fetches categorized questions from the database.
+    Returns:
+        JSON list of categorized questions with metadata.
+    """
+```
