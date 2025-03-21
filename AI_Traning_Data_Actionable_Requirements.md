@@ -153,7 +153,40 @@ To address this, we will build a system that allows **automatic dataset uploads,
 
 ##### **Sub-Issues**
 
-### **Sub-Issue 1:** Assumption Validation - Storage & Indexing Performance  
+**Sub-Issue 1:** Assumption Validation - Storage & Indexing Performance  
 **Priority:** 🔴 High  
 - Validate the assumption that structured storage with appropriate indexing will enhance data retrieval speeds.
 - Test dataset uploads up to **10 million entries**, ensuring retrieval times remain under **200ms**, even during concurrent operations.
+
+**Sub-Issue 2:** Design and Set Up Database for Dataset Storage  
+**Priority:** 🟠 Medium  
+- **Goal:** Create a **scalable and structured database** to store uploaded datasets and categorized training questions efficiently.
+- **Approach:** Use **PostgreSQL** as the primary database and implement **indexing for optimized retrieval speeds**.
+- **Tasks:**
+  - Design **a relational database schema** for storing datasets.
+  - Implement **tables for training questions, metadata, and indexing**.
+  - Add **indexes** to improve query performance.
+  - Write an **SQL script** to create the database schema.
+  - Develop a **function to insert structured datasets** into the database.
+
+  **SQL Implementation Suggestion:**
+```sql
+CREATE TABLE uploaded_datasets (
+    id SERIAL PRIMARY KEY,
+    dataset_name VARCHAR(255) NOT NULL,
+    upload_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    metadata JSONB
+);
+
+CREATE TABLE training_questions (
+    id SERIAL PRIMARY KEY,
+    dataset_id INT REFERENCES uploaded_datasets(id),
+    question_text TEXT NOT NULL,
+    category VARCHAR(255),
+    difficulty VARCHAR(50),
+    metadata JSONB
+);
+
+CREATE INDEX idx_dataset_name ON uploaded_datasets(dataset_name);
+CREATE INDEX idx_question_text ON training_questions(question_text);
+```
