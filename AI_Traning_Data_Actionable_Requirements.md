@@ -14,3 +14,19 @@ This document outlines actionable requirements, along with prioritization for st
 🟢 **Low Priority** → Enhancements or optional features.  
 
 ---
+## Actionable Requirements
+
+### 1. Automated Categorization of Training Data
+**Title:** As an AI developer, I want training questions to be automatically categorized by topic using metadata tagging so that I can easily organize and retrieve relevant data for model training.  
+**Priority:** 🔴 High  
+**GitHub Issue:** #1  
+
+#### Purpose
+After discussions with the development team, we determined that **manual categorization of training questions** is **time-consuming and inconsistent**.
+To address this, we will implement an **automated categorization system** that assigns **metadata tags** (e.g., topic, difficulty) to each training question.
+
+#### Implementation Strategy
+- **Set up a database** to store categorized questions and metadata.
+- **Develop an AI-based categorization model** to classify questions based on their content.
+- **Implement a backend API** to provide categorized results to other systems.
+- **Build a user interface** to allow developers to review and edit categorizations before finalizing.
