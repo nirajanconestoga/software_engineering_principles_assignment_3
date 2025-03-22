@@ -410,3 +410,9 @@ To address this, we will build a system that **analyzes datasets for bias**, pre
 - **Build an API** that allows users to upload datasets and receive **bias analysis reports**.  
 - **Design an interactive dashboard** for visualizing bias insights.  
 - **Ensure reports can be exported** in **PDF and JSON formats**. 
+
+##### **Sub-Issues**
+
+**Sub-Issue 1:** We assume that bias detection will identify demographic and contextual data biases in uploaded datasets. 
+**Priority:** 🔴 High  
+- Validate this assumption by comparing bias detection reports with **industry benchmarks** and conducting **user feedback sessions** to confirm the reports’ usefulness.
