@@ -526,3 +526,17 @@ To address this, we will develop a **dataset balance evaluation system** that ca
 **Sub-Issue 1:** We assume that dataset balance evaluation will improve AI model generalization.  
 **Priority:** 🔴 High  
 - Validate this assumption by verifying metric outputs against **expert-reviewed datasets** and collecting **user feedback** on report clarity and usefulness.
+
+**Sub-Issue 2:** Define Fairness Metrics for Dataset Balance Evaluation  
+**Priority:** 🟠 Medium  
+- **Goal:** Establish **dataset balance evaluation standards** and define **key fairness metrics**.
+- **Approach:** Identify **critical dataset fairness metrics** using industry standards such as **demographic parity, equal representation, and subgroup balance**.
+- **Tasks:**
+  - **Conduct workshops with users** to identify fairness concerns.
+  - **Review demographic distributions** in current datasets.
+  - **Define dataset balance metrics**, including:
+    - **Demographic parity**  
+    - **Equal representation**  
+    - **Statistical parity difference**  
+  - **Explore manual calculations** using spreadsheets as a **baseline comparison**.
+  - **Document dataset balance criteria** for **system implementation**.
