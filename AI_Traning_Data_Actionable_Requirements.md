@@ -563,3 +563,24 @@ def evaluate_dataset_balance(dataset):
         dict: A dictionary containing fairness metric results.
     """
 ```
+**Sub-Issue 4:** Develop API for Dataset Balance Evaluation  
+**Priority:** 🔴 High  
+- **Goal:** Create a REST API that allows users to submit datasets and receive balance evaluation reports.
+- **Approach:** Use **Flask/Django** to connect to the balance evaluation model.
+- **Tasks:**
+  - Develop a `POST /evaluate_dataset` API endpoint to accept dataset files.
+  - Validate file format (supporting only CSV/JSON).
+  - Run dataset balance analysis on the uploaded dataset.
+  - Generate a downloadable report in CSV and JSON formats.
+  - Handle error cases (e.g., unsupported format, missing demographic columns).
+
+**Python Implementation Suggestion:**
+```python
+@app.route('/evaluate_dataset', methods=['POST'])
+def evaluate_dataset():
+    """
+    API endpoint to upload a dataset and receive a balance evaluation report.
+    Returns:
+        JSON response with dataset fairness metrics or an error message.
+    """
+```
