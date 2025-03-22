@@ -264,6 +264,7 @@ def index_dataset(dataset_id: int):
         - Show a notification message when an upload fails.
         - Display error details (e.g., unsupported file format, upload failure).
 
+---
 
 ### 3. Logical Separation of Questions and Answers
 **Title:** As an AI developer, I want training questions to be stored separately from answers so that I can ensure unbiased model training and independent validation of AI performance.  
@@ -282,11 +283,11 @@ To address this, we will implement **a system that ensures complete separation**
 
 ##### **Sub-Issues**
 
-### **Sub-Issue 1:** We assume that separating questions and answers will reduce bias in model training.
+**Sub-Issue 1:** We assume that separating questions and answers will reduce bias in model training.
 **Priority:** 🔴 High  
 - Validate this assumption by inspecting database structures to confirm separation and verifying that questions and answers can be accessed independently.
 
-### **Sub-Issue 2:** Design and Set Up Database for Separate Storage  
+**Sub-Issue 2:** Design and Set Up Database for Separate Storage  
 **Priority:** 🟠 Medium  
 - **Goal:** Create a **structured database** where **questions and answers** are stored **in separate tables** to ensure unbiased training.
 - **Approach:** Use **PostgreSQL** and store **questions and answers in distinct schemas** to enforce separation.
@@ -317,7 +318,7 @@ CREATE TABLE answers (
 CREATE INDEX idx_question_id ON answers(question_id);
 ```
 
-### **Sub-Issue 3:** Implement API for Independent Question and Answer Retrieval  
+**Sub-Issue 3:** Implement API for Independent Question and Answer Retrieval  
 **Priority:** 🔴 High  
 - **Goal:** Develop a REST API that allows retrieval of questions and answers independently.
 - **Approach:** Use **Flask/Django** to enforce separate access to questions and answers.
@@ -338,7 +339,7 @@ def get_questions():
     """
 ```
 
-### **Sub-Issue 4:** Implement Data Validation to Prevent Cross-Contamination  
+**Sub-Issue 4:** Implement Data Validation to Prevent Cross-Contamination  
 **Priority:** 🟠 Medium  
 - **Goal:** Ensure that questions and answers remain stored separately in the system at all times.
 - **Approach:** Implement data validation rules that prevent incorrect data storage or retrieval.
@@ -357,40 +358,40 @@ def validate_data_separation(question_data, answer_data):
         Boolean indicating if the separation is enforced.
     """
 ```
-### **Sub-Issue 5:** Develop User Interface for Managing Questions and Answers  
+**Sub-Issue 5:** Develop User Interface for Managing Questions and Answers  
 **Priority:** 🟠 Medium  
 - **Goal:** Develop a web interface that allows users to retrieve and manage questions and answers independently.
 - **Purpose:** Enable AI developers to view, edit, and validate questions and answers separately before using them for training.
 - **Tasks:**
   
-  **Develop UI Layout**  
-  - Design a two-tab layout:  
-    - **Tab 1:** Displays only questions.  
-    - **Tab 2:** Displays only answers (linked to a question).  
-  - Ensure a responsive design for various screen sizes.
+    - **Develop UI Layout**  
+        - Design a two-tab layout:  
+            - **Tab 1:** Displays only questions.  
+            - **Tab 2:** Displays only answers (linked to a question).  
+        - Ensure a responsive design for various screen sizes.
 
-  **Create Input and Display Fields**  
-  - Display the question text in a table format.  
-  - Add a separate section for answers linked to a selected question.  
-  - Include metadata fields for both questions and answers.
+    - **Create Input and Display Fields**  
+        - Display the question text in a table format.  
+        - Add a separate section for answers linked to a selected question.  
+        - Include metadata fields for both questions and answers.
 
-  **Implement User Actions**  
-  - Add a "View Answers" button next to each question.  
-  - Allow users to edit questions and answers separately.  
-  - Add a "Delete" button that confirms deletion of only questions or only answers.
+    - **Implement User Actions**  
+        - Add a "View Answers" button next to each question.  
+        - Allow users to edit questions and answers separately.  
+        - Add a "Delete" button that confirms deletion of only questions or only answers.
 
-  **Implement Search and Filter Functionalities**  
-  - Allow users to search questions by keyword or category.  
-  - Add a filter for difficulty level to refine questions displayed.  
-  - Implement pagination for better navigation of large datasets.
+    - **Implement Search and Filter Functionalities**  
+        - Allow users to search questions by keyword or category.  
+        - Add a filter for difficulty level to refine questions displayed.  
+        - Implement pagination for better navigation of large datasets.
 
-  **Connect UI with Backend API**  
-  - Fetch questions from `GET /questions`.  
-  - Fetch answers from `GET /answers/{question_id}` when a question is selected.  
-  - Ensure updates to questions do not affect answer storage.
+    - **Connect UI with Backend API**  
+        - Fetch questions from `GET /questions`.  
+        - Fetch answers from `GET /answers/{question_id}` when a question is selected.  
+        - Ensure updates to questions do not affect answer storage.
 
-  **Handle Errors and Notifications**  
-  - Show an error message if a user tries to edit an answer in the question panel.  
-  - Display a notification when a question or answer is successfully updated.
+    - **Handle Errors and Notifications**  
+        - Show an error message if a user tries to edit an answer in the question panel.  
+        - Display a notification when a question or answer is successfully updated.
 
 ---
