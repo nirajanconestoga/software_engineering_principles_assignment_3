@@ -285,3 +285,34 @@ To address this, we will implement **a system that ensures complete separation**
 ### **Sub-Issue 1:** We assume that separating questions and answers will reduce bias in model training.
 **Priority:** 🔴 High  
 - Validate this assumption by inspecting database structures to confirm separation and verifying that questions and answers can be accessed independently.
+
+### **Sub-Issue 2:** Design and Set Up Database for Separate Storage  
+**Priority:** 🟠 Medium  
+- **Goal:** Create a **structured database** where **questions and answers** are stored **in separate tables** to ensure unbiased training.
+- **Approach:** Use **PostgreSQL** and store **questions and answers in distinct schemas** to enforce separation.
+- **Tasks:**
+  - Create a **table for questions** with metadata fields.
+  - Create a **table for answers**, linking each answer to a question **via a foreign key**.
+  - Implement **indexing** for fast lookup of questions and answers.
+  - Write an **SQL script** to initialize the database.
+  - Develop a **function to insert questions and answers** separately.
+
+**SQL Implementation Suggestion:**
+```sql
+CREATE TABLE questions (
+    id SERIAL PRIMARY KEY,
+    question_text TEXT NOT NULL,
+    category VARCHAR(255),
+    difficulty VARCHAR(50),
+    metadata JSONB
+);
+
+CREATE TABLE answers (
+    id SERIAL PRIMARY KEY,
+    question_id INT REFERENCES questions(id),
+    answer_text TEXT NOT NULL,
+    metadata JSONB
+);
+
+CREATE INDEX idx_question_id ON answers(question_id);
+```
