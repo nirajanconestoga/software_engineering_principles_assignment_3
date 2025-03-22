@@ -23,7 +23,7 @@ This document outlines actionable requirements, along with prioritization for st
 
 ### 1. Automated Categorization of Training Data
 
-**Title:** As an AI developer, I want training questions to be automatically categorized by topic using metadata tagging so that I can easily organize and retrieve relevant data for model training.  
+**User Story:** As an AI developer, I want training questions to be automatically categorized by topic using metadata tagging so that I can easily organize and retrieve relevant data for model training.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #1
 
@@ -154,7 +154,7 @@ def get_categorized_questions():
 
 ### 2. Dataset Upload and Structured Storage
 
-**Title:** As an AI developer, I want to upload a dataset and have the system automatically structure and store categorized training questions so that I can efficiently retrieve and manage large volumes of data.  
+**User Story:** As an AI developer, I want to upload a dataset and have the system automatically structure and store categorized training questions so that I can efficiently retrieve and manage large volumes of data.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #2
 
@@ -305,7 +305,7 @@ def index_dataset(dataset_id: int):
 
 ### 3. Logical Separation of Questions and Answers
 
-**Title:** As an AI developer, I want training questions to be stored separately from answers so that I can ensure unbiased model training and independent validation of AI performance.  
+**User Story:** As an AI developer, I want training questions to be stored separately from answers so that I can ensure unbiased model training and independent validation of AI performance.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #3
 
@@ -452,7 +452,7 @@ def validate_data_separation(question_data, answer_data):
 
 ### 4. Bias Analysis and Reporting System
 
-**Title:** As an AI developer, I want to upload a dataset and receive a bias analysis report so that I can assess fairness before using the data for training.  
+**User Story:** As an AI developer, I want to upload a dataset and receive a bias analysis report so that I can assess fairness before using the data for training.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #4
 
@@ -577,7 +577,7 @@ def analyze_bias():
 
 ### 5. Dataset Balance Evaluation System
 
-**Title:** As an AI developer, I want the system to evaluate dataset balance using fairness metrics so that I can ensure diverse and representative training data.  
+**User Story:** As an AI developer, I want the system to evaluate dataset balance using fairness metrics so that I can ensure diverse and representative training data.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #5
 
