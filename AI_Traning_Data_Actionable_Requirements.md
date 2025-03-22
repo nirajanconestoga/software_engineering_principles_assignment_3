@@ -264,3 +264,19 @@ def index_dataset(dataset_id: int):
         - Show a notification message when an upload fails.
         - Display error details (e.g., unsupported file format, upload failure).
 
+
+### 3. Logical Separation of Questions and Answers
+**Title:** As an AI developer, I want training questions to be stored separately from answers so that I can ensure unbiased model training and independent validation of AI performance.  
+**Priority:** 🔴 High  
+**GitHub Issue:** #3  
+
+#### **Purpose**
+After discussions with AI developers, we identified that **storing questions and answers together** can lead to **bias in model training** and **inconsistent validation results**.  
+To address this, we will implement **a system that ensures complete separation** between training questions and their corresponding answers.
+
+#### **Implementation Strategy**
+- **Design a database schema** that stores questions and answers in separate tables.  
+- **Develop an API** that allows retrieval of questions and answers independently.  
+- **Ensure validation mechanisms** to prevent cross-contamination of question and answer data.  
+- **Implement a UI** that allows users to retrieve and manage questions/answers separately. 
+
