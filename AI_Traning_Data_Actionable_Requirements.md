@@ -476,3 +476,32 @@ def analyze_bias():
         JSON response with bias metrics or an error message.
     """
 ```
+
+**Sub-Issue 5:** Implement Interactive Dashboard for Bias Analysis  
+**Priority:** 🟠 Medium  
+- **Goal:** Develop a web interface that allows users to visualize bias insights interactively.
+- **Purpose:** Enable AI developers to explore bias metrics visually and download reports.
+- **Tasks:**
+    - **Develop UI Layout**  
+        - Design a dashboard layout displaying key bias metrics and insights.
+        - Ensure a responsive design for desktop and mobile.
+
+    - **Create Data Visualization Components**  
+        - Implement bar charts and heatmaps to display bias distributions.
+        - Add dropdown filters to analyze bias across different demographic groups.
+        - Show summary statistics on dataset fairness.
+
+    - **Implement User Actions**  
+        - Add a "Run Analysis" button to trigger bias detection.
+        - Provide an "Export Report" button to download bias reports in PDF/JSON.
+
+    - **Connect UI with Backend API**  
+        - Send uploaded datasets to the API (`POST /upload_dataset`).
+        - Fetch bias analysis results from `GET /bias_report/{dataset_id}`.
+        - Update visualizations in real-time as new reports are generated.
+
+    - **Handle Errors and Notifications**  
+        - Show an error message if a dataset upload fails.
+        - Display a notification when bias analysis completes successfully.
+
+---
