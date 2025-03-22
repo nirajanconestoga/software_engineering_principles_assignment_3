@@ -454,3 +454,25 @@ def analyze_bias(dataset: BinaryLabelDataset):
         dict: A dictionary containing bias metrics and fairness insights.
     """
 ```
+
+**Sub-Issue 4:** Develop API for Bias Detection and Report Generation  
+**Priority:** 🔴 High  
+- **Goal:** Create a REST API that allows users to upload datasets and receive bias reports.
+- **Approach:** Use **Flask/Django** to connect to the bias detection model.
+- **Tasks:**
+  - Develop a `POST /upload_dataset` API endpoint to accept dataset files.
+  - Validate file format (supporting only CSV/JSON).
+  - Run bias analysis on the uploaded dataset.
+  - Generate a downloadable report in PDF and JSON formats.
+  - Handle error cases (e.g., unsupported format, missing data).
+
+**Python Implementation Suggestion:**
+```python
+@app.route('/analyze_bias', methods=['POST'])
+def analyze_bias():
+    """
+    API endpoint to upload a dataset and receive a bias analysis report.
+    Returns:
+        JSON response with bias metrics or an error message.
+    """
+```
