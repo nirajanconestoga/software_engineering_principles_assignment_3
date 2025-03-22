@@ -280,3 +280,8 @@ To address this, we will implement **a system that ensures complete separation**
 - **Ensure validation mechanisms** to prevent cross-contamination of question and answer data.  
 - **Implement a UI** that allows users to retrieve and manage questions/answers separately. 
 
+##### **Sub-Issues**
+
+### **Sub-Issue 1:** We assume that separating questions and answers will reduce bias in model training.
+**Priority:** 🔴 High  
+- Validate this assumption by inspecting database structures to confirm separation and verifying that questions and answers can be accessed independently.
