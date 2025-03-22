@@ -520,3 +520,9 @@ To address this, we will develop a **dataset balance evaluation system** that ca
 - **Build an API** that processes datasets and returns **balance evaluation reports**.
 - **Design an interactive dashboard** for visualizing dataset balance.
 - **Ensure reports can be exported** in **standard data formats**.
+
+##### **Sub-Issues**
+
+**Sub-Issue 1:** We assume that dataset balance evaluation will improve AI model generalization.  
+**Priority:** 🔴 High  
+- Validate this assumption by verifying metric outputs against **expert-reviewed datasets** and collecting **user feedback** on report clarity and usefulness.
