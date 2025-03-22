@@ -396,7 +396,7 @@ def validate_data_separation(question_data, answer_data):
 
 ---
 
-### 3. Bias Analysis and Reporting System
+### 4. Bias Analysis and Reporting System
 **Title:** As an AI developer, I want to upload a dataset and receive a bias analysis report so that I can assess fairness before using the data for training.  
 **Priority:** 🔴 High  
 **GitHub Issue:** #4  
