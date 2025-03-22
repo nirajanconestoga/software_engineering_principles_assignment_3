@@ -416,3 +416,17 @@ To address this, we will build a system that **analyzes datasets for bias**, pre
 **Sub-Issue 1:** We assume that bias detection will identify demographic and contextual data biases in uploaded datasets. 
 **Priority:** 🔴 High  
 - Validate this assumption by comparing bias detection reports with **industry benchmarks** and conducting **user feedback sessions** to confirm the reports’ usefulness.
+
+**Sub-Issue 2:** Define Bias Metrics and Fairness Criteria  
+**Priority:** 🟠 Medium  
+- **Goal:** Establish **bias detection standards** and define **fairness evaluation metrics**.
+- **Approach:** Identify **key bias metrics** using industry standards such as **demographic parity, equalized odds, and statistical parity difference**.
+- **Tasks:**
+  - **Interview AI developers** to determine necessary bias metrics.
+  - **Review historical datasets** to identify common bias patterns.
+  - **Define fairness metrics**, including:
+    - **Demographic parity**  
+    - **Equalized odds**  
+    - **Statistical parity difference**  
+  - **Research industry best practices** for fairness analysis (e.g., IBM’s AIF360, Microsoft’s Fairlearn).
+  - **Document bias detection criteria** for system implementation.
