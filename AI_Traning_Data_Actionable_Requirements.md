@@ -609,6 +609,6 @@ def evaluate_dataset():
 
     - **Handle Errors and Notifications**  
         - Show an error message if a dataset upload fails.
-    - Display a notification when dataset balance evaluation completes successfully.
+        - Display a notification when dataset balance evaluation completes successfully.
 
 ---
