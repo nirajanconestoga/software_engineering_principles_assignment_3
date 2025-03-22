@@ -316,3 +316,24 @@ CREATE TABLE answers (
 
 CREATE INDEX idx_question_id ON answers(question_id);
 ```
+
+### **Sub-Issue 3:** Implement API for Independent Question and Answer Retrieval  
+**Priority:** 🔴 High  
+- **Goal:** Develop a REST API that allows retrieval of questions and answers independently.
+- **Approach:** Use **Flask/Django** to enforce separate access to questions and answers.
+- **Tasks:**
+  - Develop a `GET /questions` API endpoint to retrieve only questions.
+  - Develop a `GET /answers/{question_id}` API endpoint to fetch answers separately.
+  - Implement a validation mechanism to prevent storing answers in the questions table.
+  - Handle error cases (e.g., missing question ID, invalid requests).
+
+**Python Implementation Suggestion:**
+```python
+@app.route('/questions', methods=['GET'])
+def get_questions():
+    """
+    Fetches all questions from the database.
+    Returns:
+        JSON list of questions with metadata.
+    """
+```
