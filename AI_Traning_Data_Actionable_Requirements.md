@@ -584,3 +584,31 @@ def evaluate_dataset():
         JSON response with dataset fairness metrics or an error message.
     """
 ```
+
+**Sub-Issue 5:** Implement Interactive Dashboard for Dataset Balance Visualization  
+**Priority:** 🟠 Medium  
+- **Goal:** Develop a web interface that allows users to visualize dataset balance metrics interactively.
+- **Purpose:** Enable AI developers to explore dataset balance insights visually and export fairness reports.
+- **Tasks:**
+    - **Develop UI Layout**  
+        - Design a dashboard layout displaying key fairness metrics.
+
+    - **Create Data Visualization Components**  
+        - Implement bar charts and heatmaps to display dataset balance distributions.
+        - Add dropdown filters to analyze demographic group fairness.
+        - Show summary statistics on dataset representation.
+
+    - **Implement User Actions**  
+        - Add a "Run Evaluation" button to trigger dataset balance assessment.
+        - Provide an "Export Report" button to download fairness reports in CSV/JSON.
+
+    - **Connect UI with Backend API**  
+        - Send uploaded datasets to the API (`POST /evaluate_dataset`).
+        - Fetch dataset balance results from `GET /dataset_balance_report/{dataset_id}`.
+        - Update visualizations in real-time as new reports are generated.
+
+    - **Handle Errors and Notifications**  
+        - Show an error message if a dataset upload fails.
+    - Display a notification when dataset balance evaluation completes successfully.
+
+---
