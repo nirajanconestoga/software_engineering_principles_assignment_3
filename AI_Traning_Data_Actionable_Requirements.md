@@ -337,3 +337,23 @@ def get_questions():
         JSON list of questions with metadata.
     """
 ```
+
+### **Sub-Issue 4:** Implement Data Validation to Prevent Cross-Contamination  
+**Priority:** 🟠 Medium  
+- **Goal:** Ensure that questions and answers remain stored separately in the system at all times.
+- **Approach:** Implement data validation rules that prevent incorrect data storage or retrieval.
+- **Tasks:**
+  - Implement a data pipeline check to verify uploads follow the separate schema structure.
+  - Develop a validation function that prevents answers from being stored in the questions table.
+  - Log violations or incorrect data uploads for monitoring.
+  - Implement unit tests to verify that questions and answers remain separate in all operations.
+
+**Python Implementation Suggestion:**
+```python
+def validate_data_separation(question_data, answer_data):
+    """
+    Ensures that question data and answer data are stored separately.
+    Returns:
+        Boolean indicating if the separation is enforced.
+    """
+```
