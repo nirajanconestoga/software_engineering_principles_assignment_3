@@ -357,3 +357,40 @@ def validate_data_separation(question_data, answer_data):
         Boolean indicating if the separation is enforced.
     """
 ```
+### **Sub-Issue 5:** Develop User Interface for Managing Questions and Answers  
+**Priority:** 🟠 Medium  
+- **Goal:** Develop a web interface that allows users to retrieve and manage questions and answers independently.
+- **Purpose:** Enable AI developers to view, edit, and validate questions and answers separately before using them for training.
+- **Tasks:**
+  
+  **Develop UI Layout**  
+  - Design a two-tab layout:  
+    - **Tab 1:** Displays only questions.  
+    - **Tab 2:** Displays only answers (linked to a question).  
+  - Ensure a responsive design for various screen sizes.
+
+  **Create Input and Display Fields**  
+  - Display the question text in a table format.  
+  - Add a separate section for answers linked to a selected question.  
+  - Include metadata fields for both questions and answers.
+
+  **Implement User Actions**  
+  - Add a "View Answers" button next to each question.  
+  - Allow users to edit questions and answers separately.  
+  - Add a "Delete" button that confirms deletion of only questions or only answers.
+
+  **Implement Search and Filter Functionalities**  
+  - Allow users to search questions by keyword or category.  
+  - Add a filter for difficulty level to refine questions displayed.  
+  - Implement pagination for better navigation of large datasets.
+
+  **Connect UI with Backend API**  
+  - Fetch questions from `GET /questions`.  
+  - Fetch answers from `GET /answers/{question_id}` when a question is selected.  
+  - Ensure updates to questions do not affect answer storage.
+
+  **Handle Errors and Notifications**  
+  - Show an error message if a user tries to edit an answer in the question panel.  
+  - Display a notification when a question or answer is successfully updated.
+
+---
